@@ -1,11 +1,8 @@
 ###Postgres CLI Commands
-psql --version
-
-psql -U postgres - login
-
+`psql --version` - check version
+`psql -U postgres` - login
 `\l` view all databases in postgres
 `\c {databasename}` - 'you are connected', we can view all tables in the database
-
 `\dt` - view all datatables in the database
 
 Get all information from the datatable:
