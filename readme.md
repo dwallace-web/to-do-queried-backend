@@ -12,7 +12,17 @@ SELECT * FROM todo;
 ```
 
 ###connect database to server
-see db.js
+
+docs: https://node-postgres.com/api/pool
+
+```
+const pool = new Pool({
+  user: 'postgres',
+  password: process.env.password,
+  port: 5432,
+  database: 'perntodo',
+});
+```
 
 ###create endpoints with async functions
 
@@ -28,11 +38,7 @@ app.post('/todos', async (req, res) => {
 });
 ```
 
-INSERT INTO - adds data
-specific table -
-specific column -
-value of new row - variable
-second argument is the [description]
+COMMAND specific table DETAIL (specific column) VALUES($1 placeholder), second argument is the [description]
 
 ```
 const newTodo = await pool.query(
