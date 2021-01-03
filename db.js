@@ -1,5 +1,7 @@
 const Pool = require('pg').Pool;
 
+//conect to the database - docs: https://node-postgres.com/api/pool
+
 const pool = new Pool({
   user: 'postgres',
   password: process.env.password,
